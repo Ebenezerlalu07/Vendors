@@ -1,0 +1,896 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Trusted Community Vendors – Sienna Malayali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#fdf8f3;--sand:#f0e9de;--sand2:#e8ddd1;
+  --terra:#c2714f;--terra-light:#d98a6a;--terra-dark:#9e5138;
+  --gold:#d4952a;--gold-bg:#fff8ed;
+  --green:#3d7a52;--green-bg:#edf5f0;
+  --charcoal:#252320;--mid:#5c5650;--soft:#9c9690;--white:#ffffff;
+  --radius:14px;--radius-sm:8px;
+  --sh-sm:0 2px 10px rgba(44,35,25,.07);
+  --sh-md:0 6px 28px rgba(44,35,25,.11);
+  --sh-lg:0 16px 54px rgba(44,35,25,.16);
+  --t:.24s cubic-bezier(.4,0,.2,1);
+  --ff-h:'Playfair Display',Georgia,serif;
+  --ff-b:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-b);background:var(--cream);color:var(--charcoal);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* -- LAYOUT -- */
+.container{max-width:1140px;margin:0 auto;padding:0 22px}
+.section{padding:72px 0}
+.section-tag{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
+.section-title{font-family:var(--ff-h);font-size:clamp(1.7rem,3.5vw,2.55rem);font-weight:700;line-height:1.18;margin-bottom:12px}
+.section-sub{color:var(--mid);font-size:1rem;max-width:540px;line-height:1.7}
+.divider{width:48px;height:3px;background:var(--terra);border-radius:3px;margin:20px 0}
+.text-center{text-align:center}
+.text-center .section-sub{margin:0 auto}
+.text-center .divider{margin:20px auto}
+
+/* -- BUTTONS -- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 26px;border-radius:50px;font-family:var(--ff-b);font-size:.9rem;font-weight:600;cursor:pointer;border:none;transition:var(--t);white-space:nowrap;text-decoration:none}
+.btn-primary{background:var(--terra);color:#fff;box-shadow:0 4px 18px rgba(194,113,79,.38)}
+.btn-primary:hover{background:var(--terra-dark);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--charcoal);border:2px solid rgba(44,35,25,.18)}
+.btn-outline:hover{border-color:var(--terra);color:var(--terra);background:#fef5f1}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 4px 18px rgba(61,122,82,.3)}
+.btn-green:hover{background:#2f6040;transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 18px rgba(212,149,42,.35)}
+.btn-gold:hover{background:#b57d1e;transform:translateY(-1px)}
+.btn-sm{padding:9px 18px;font-size:.82rem}
+.btn-lg{padding:16px 34px;font-size:1rem}
+
+/* -- BADGES -- */
+.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 11px;border-radius:50px;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+.badge-rec{background:var(--green-bg);color:var(--green)}
+.badge-spon{background:var(--gold-bg);color:var(--gold)}
+
+/* -- NAV -- */
+nav{position:sticky;top:0;z-index:200;background:rgba(253,248,243,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(44,35,25,.08);padding:13px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.logo-mark{width:38px;height:38px;background:var(--terra);border-radius:10px;display:grid;place-items:center;font-family:var(--ff-h);font-size:1.1rem;font-weight:700;color:#fff}
+.logo-text{font-family:var(--ff-h);font-size:1rem;font-weight:700}
+.logo-text span{color:var(--terra)}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--mid);transition:var(--t)}
+.nav-links a:hover{color:var(--terra)}
+.nav-right{display:flex;gap:10px;align-items:center}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px;flex-direction:column;gap:5px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--charcoal);border-radius:2px;transition:var(--t)}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:14px 22px 18px;background:#fff;border-bottom:1px solid var(--sand2)}
+.mobile-menu a{padding:10px 0;font-size:.94rem;font-weight:500;color:var(--mid);border-bottom:1px solid var(--sand);transition:var(--t)}
+.mobile-menu a:last-child{border:none}
+.mobile-menu a:hover{color:var(--terra)}
+.mobile-menu.open{display:flex}
+
+/* -- HERO -- */
+.hero{padding:80px 0 70px;background:radial-gradient(ellipse 55% 55% at 85% 35%,rgba(194,113,79,.13) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 10% 85%,rgba(61,122,82,.09) 0%,transparent 65%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:18px}
+.hero-eyebrow::before{content:'';width:28px;height:2px;background:var(--terra);border-radius:2px}
+.hero h1{font-family:var(--ff-h);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;line-height:1.1;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero-desc{font-size:1.05rem;color:var(--mid);margin-bottom:32px;line-height:1.75;max-width:460px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.hero-trust{display:flex;align-items:center;gap:14px;padding:14px 20px;background:#fff;border-radius:var(--radius);box-shadow:var(--sh-sm);width:fit-content}
+.trust-avatars{display:flex}
+.ta{width:32px;height:32px;border-radius:50%;border:2px solid #fff;margin-left:-8px;font-size:.72rem;font-weight:700;display:grid;place-items:center;color:#fff}
+.ta:first-child{margin-left:0}
+.ta1{background:#c2714f}.ta2{background:#3d7a52}.ta3{background:#d4952a}.ta4{background:#4a52c8}
+.trust-text{font-size:.82rem}
+.trust-text strong{display:block;font-weight:600;color:var(--charcoal)}
+.trust-text span{color:var(--soft)}
+
+/* Hero cards */
+.hero-visual{position:relative}
+.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hc{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:var(--sh-md);transition:var(--t)}
+.hc:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.hc.accent{background:var(--terra);color:#fff}
+.hc-icon{width:42px;height:42px;border-radius:var(--radius-sm);display:grid;place-items:center;font-size:1.3rem;margin-bottom:12px}
+.hc-icon.s{background:var(--sand)}.hc-icon.g{background:var(--green-bg)}.hc-icon.o{background:var(--gold-bg)}.hc-icon.w{background:rgba(255,255,255,.22)}
+.hc h4{font-size:.88rem;font-weight:600;margin-bottom:4px}
+.hc p{font-size:.78rem;color:var(--soft)}
+.hc.accent p{color:rgba(255,255,255,.68)}
+.hc .stars{font-size:.78rem;color:var(--gold);margin-top:6px}
+.hc.accent .stars{color:#ffe08a}
+.hero-float{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);background:#fff;border-radius:50px;padding:10px 20px;box-shadow:var(--sh-md);white-space:nowrap;font-size:.82rem;font-weight:600;display:flex;align-items:center;gap:8px}
+.live-dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 0 3px rgba(61,122,82,.2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(61,122,82,.2)}50%{box-shadow:0 0 0 6px rgba(61,122,82,.08)}}
+
+/* -- CATEGORIES -- */
+.search-row{display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+.search-wrap{flex:1;min-width:200px;position:relative}
+.search-wrap svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--soft);pointer-events:none}
+.search-wrap input{width:100%;padding:13px 18px 13px 44px;border:2px solid var(--sand2);border-radius:50px;background:#fff;font-family:var(--ff-b);font-size:.92rem;color:var(--charcoal);outline:none;transition:var(--t)}
+.search-wrap input::placeholder{color:var(--soft)}
+.search-wrap input:focus{border-color:var(--terra)}
+.filter-select{padding:13px 20px;border:2px solid var(--sand2);border-radius:50px;background:#fff;font-family:var(--ff-b);font-size:.92rem;color:var(--charcoal);outline:none;cursor:pointer;transition:var(--t);min-width:160px}
+.filter-select:focus{border-color:var(--terra)}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:12px}
+.cat-btn{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 8px;background:#fff;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;transition:var(--t);box-shadow:var(--sh-sm);text-align:center}
+.cat-btn:hover,.cat-btn.active{border-color:var(--terra);background:#fef5f1}
+.cat-ico{width:44px;height:44px;border-radius:var(--radius-sm);background:var(--sand);display:grid;place-items:center;font-size:1.3rem;transition:var(--t)}
+.cat-btn:hover .cat-ico,.cat-btn.active .cat-ico{background:var(--terra)}
+.cat-lbl{font-size:.75rem;font-weight:600;color:var(--mid);transition:var(--t)}
+.cat-btn:hover .cat-lbl,.cat-btn.active .cat-lbl{color:var(--terra)}
+
+/* -- VENDOR GRID -- */
+.vendors-section{padding:60px 0;background:var(--sand)}
+.vendors-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:34px;flex-wrap:wrap;gap:16px}
+.vendor-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.vendor-card{background:#fff;border-radius:var(--radius);box-shadow:var(--sh-sm);overflow:hidden;transition:var(--t);border:1px solid rgba(44,35,25,.06);display:flex;flex-direction:column}
+.vendor-card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.vendor-card[data-featured="true"]{border:2px solid var(--gold);box-shadow:0 6px 28px rgba(212,149,42,.18)}
+.vc-header{padding:22px 22px 0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.vc-logo{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;font-size:1.5rem;font-weight:700;font-family:var(--ff-h);color:#fff;flex-shrink:0}
+.vc-badges{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.vc-body{padding:16px 22px;flex:1}
+.vc-name{font-family:var(--ff-h);font-size:1.1rem;font-weight:700;margin-bottom:3px}
+.vc-cat{font-size:.8rem;color:var(--terra);font-weight:600;margin-bottom:10px}
+.vc-desc{font-size:.88rem;color:var(--mid);line-height:1.65;margin-bottom:14px}
+.vc-rating{display:flex;align-items:center;gap:6px;margin-bottom:14px}
+.stars{color:var(--gold);font-size:.88rem;letter-spacing:1px}
+.vc-rating span{font-size:.82rem;color:var(--soft)}
+.vc-quote{background:var(--cream);border-left:3px solid var(--terra);padding:10px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:.82rem;color:var(--mid);font-style:italic;margin-bottom:14px}
+.vc-location{display:flex;align-items:center;gap:5px;font-size:.8rem;color:var(--soft)}
+.vc-footer{padding:16px 22px;border-top:1px solid var(--sand);display:flex;gap:10px;flex-wrap:wrap}
+.vc-contact{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--mid);font-weight:500;padding:7px 12px;background:var(--cream);border-radius:50px;transition:var(--t);cursor:pointer;border:none;font-family:var(--ff-b);text-decoration:none}
+.vc-contact:hover{background:var(--sand2);color:var(--charcoal)}
+.vc-wa{background:#e7f8ee;color:#1a7a3f}
+.vc-wa:hover{background:#d4f2e0}
+.no-results{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--soft)}
+.no-results span{font-size:2.5rem;display:block;margin-bottom:12px}
+
+/* -- FEATURED BANNER -- */
+.featured-section{padding:70px 0}
+.featured-banner{background:linear-gradient(135deg,#2c2420 0%,#4a3028 100%);border-radius:20px;padding:48px;overflow:hidden;position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px}
+.featured-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 80% 50%,rgba(194,113,79,.25) 0%,transparent 60%)}
+.fb-content{position:relative;z-index:1}
+.fb-tag{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(212,149,42,.18);padding:5px 14px;border-radius:50px;margin-bottom:16px}
+.fb-title{font-family:var(--ff-h);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:#fff;line-height:1.2;margin-bottom:12px}
+.fb-desc{color:rgba(255,255,255,.65);font-size:.95rem;margin-bottom:24px}
+.fb-actions{display:flex;gap:12px;flex-wrap:wrap}
+.fb-visual{position:relative;z-index:1}
+.fb-stack{display:flex;flex-direction:column;gap:12px}
+.fb-mini{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:14px 18px;display:flex;align-items:center;gap:14px;min-width:220px}
+.fb-mini-logo{width:38px;height:38px;border-radius:8px;display:grid;place-items:center;font-size:1.1rem;flex-shrink:0}
+.fb-mini-name{font-size:.85rem;font-weight:600;color:#fff}
+.fb-mini-cat{font-size:.75rem;color:rgba(255,255,255,.5)}
+.fb-mini-badge{font-size:.65rem;font-weight:700;color:var(--gold);background:rgba(212,149,42,.2);padding:3px 8px;border-radius:50px}
+
+/* -- SUBMIT SECTION -- */
+.submit-section{padding:72px 0;background:var(--sand)}
+.submit-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;align-items:start}
+.submit-info{position:sticky;top:90px}
+.submit-steps{margin-top:28px;display:flex;flex-direction:column;gap:18px}
+.submit-step{display:flex;align-items:flex-start;gap:14px}
+.step-num{width:32px;height:32px;border-radius:50%;background:var(--terra);display:grid;place-items:center;color:#fff;font-size:.8rem;font-weight:700;flex-shrink:0}
+.step-text h4{font-size:.88rem;font-weight:600;margin-bottom:2px}
+.step-text p{font-size:.82rem;color:var(--mid)}
+.submit-note{margin-top:28px;padding:16px 18px;background:var(--green-bg);border-radius:var(--radius);border-left:3px solid var(--green);font-size:.84rem;color:var(--mid);line-height:1.6}
+.submit-note strong{color:var(--green)}
+
+/* Google Form box */
+.gform-wrap{background:#fff;border-radius:20px;box-shadow:var(--sh-md);overflow:hidden;border:1px solid rgba(44,35,25,.07)}
+.gform-header{padding:28px 32px 20px;border-bottom:1px solid var(--sand)}
+.gform-header h3{font-family:var(--ff-h);font-size:1.35rem;font-weight:700;margin-bottom:4px}
+.gform-header p{font-size:.88rem;color:var(--mid)}
+.gform-embed{width:100%;height:860px;border:none;display:block}
+.gform-placeholder{padding:44px 32px;text-align:center}
+.gfp-icon{font-size:3rem;margin-bottom:16px}
+.gform-placeholder h3{font-family:var(--ff-h);font-size:1.3rem;margin-bottom:10px}
+.gform-placeholder p{color:var(--mid);font-size:.9rem;max-width:400px;margin:0 auto 24px;line-height:1.65}
+.gform-placeholder code{background:var(--sand);padding:2px 6px;border-radius:4px;font-size:.85rem}
+.gform-tips{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 32px 28px}
+.gtip{background:var(--cream);border-radius:var(--radius-sm);padding:12px 14px;font-size:.82rem}
+.gtip strong{display:block;font-weight:600;color:var(--charcoal);margin-bottom:2px}
+.gtip span{color:var(--soft)}
+
+/* -- SPONSORSHIP -- */
+.sponsor-section{padding:72px 0}
+.sponsor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:44px 0}
+.sponsor-card{background:#fff;border-radius:var(--radius);padding:32px 26px;box-shadow:var(--sh-sm);text-align:center;transition:var(--t);border:2px solid transparent}
+.sponsor-card:hover{border-color:var(--terra);transform:translateY(-4px);box-shadow:var(--sh-lg)}
+.sc-icon{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;margin:0 auto 16px}
+.sc1{background:#fef5f1}.sc2{background:var(--green-bg)}.sc3{background:var(--gold-bg)}
+.sponsor-card h3{font-family:var(--ff-h);font-size:1.05rem;font-weight:700;margin-bottom:10px}
+.sponsor-card p{font-size:.88rem;color:var(--mid);line-height:1.65}
+.sponsor-cta{background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(194,113,79,.1) 0%,transparent 70%),var(--cream);border-radius:20px;padding:52px 40px;text-align:center;border:2px solid var(--sand2)}
+.sponsor-cta h3{font-family:var(--ff-h);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;margin-bottom:12px}
+.sponsor-cta p{color:var(--mid);max-width:500px;margin:0 auto 28px}
+.sponsor-cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* -- BACKEND NOTE -- */
+.backend-section{padding:64px 0;background:var(--charcoal);color:#fff}
+.backend-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.backend-inner .section-tag{color:var(--terra-light)}
+.backend-inner .section-title{color:#fff}
+.backend-inner .section-sub{color:rgba(255,255,255,.5)}
+.bf-step{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.bf-step:last-child{border:none}
+.bf-num{width:34px;height:34px;border-radius:50%;background:rgba(194,113,79,.2);border:1px solid rgba(194,113,79,.4);display:grid;place-items:center;font-size:.82rem;font-weight:700;color:var(--terra-light);flex-shrink:0}
+.bf-text h4{font-size:.9rem;font-weight:600;color:#fff;margin-bottom:3px}
+.bf-text p{font-size:.82rem;color:rgba(255,255,255,.45)}
+.bf-tag{display:inline-block;font-size:.68rem;font-weight:600;background:rgba(194,113,79,.18);color:var(--terra-light);padding:2px 8px;border-radius:4px;margin-top:4px}
+.check-list{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.check-list li{display:flex;align-items:center;gap:10px;font-size:.85rem;color:rgba(255,255,255,.5)}
+.check-list li::before{content:'✓';color:var(--terra-light);font-weight:700;flex-shrink:0}
+
+/* -- FOOTER -- */
+footer{background:#1a1512;color:rgba(255,255,255,.55);padding:44px 0 28px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-logo .logo-text{color:#fff}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.4);transition:var(--t)}
+.footer-links a:hover{color:var(--terra-light)}
+.footer-copy{font-size:.82rem;text-align:center;margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08)}
+
+/* -- WHATSAPP FLOAT -- */
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:300;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 6px 22px rgba(37,211,102,.45);font-size:1.6rem;transition:var(--t)}
+.wa-float:hover{transform:scale(1.1);background:#1ebe5d}
+.wa-tooltip{position:absolute;right:66px;background:#1a1512;color:#fff;font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:var(--t)}
+.wa-float:hover .wa-tooltip{opacity:1}
+
+/* -- RESPONSIVE -- */
+@media(max-width:900px){
+.hero-grid{grid-template-columns:1fr}
+.hero-visual{display:none}
+.submit-grid{grid-template-columns:1fr}
+.submit-info{position:static}
+.sponsor-grid{grid-template-columns:1fr}
+.backend-inner{grid-template-columns:1fr}
+.featured-banner{grid-template-columns:1fr}
+.fb-visual{display:none}
+.nav-links{display:none}
+.nav-right .btn{display:none}
+.hamburger{display:flex}
+}
+@media(max-width:600px){
+.vendor-grid{grid-template-columns:1fr}
+.gform-tips{grid-template-columns:1fr}
+.section{padding:52px 0}
+.gform-embed{height:1000px}
+.sponsor-cta{padding:36px 22px}
+}
+
+/* -- FADE ANIMATION -- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .5s ease both}
+.fade-up-2{animation:fadeUp .5s .12s ease both}
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <a href="https://www.siennamalayali.com" class="nav-logo">
+        <div class="logo-mark">S</div>
+        <span class="logo-text">Sienna <span>Malayali</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#vendors">Vendors</a></li>
+        <li><a href="#submit">List Your Business</a></li>
+        <li><a href="#sponsorship">Sponsorship</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="#submit" class="btn btn-primary btn-sm">+ List Your Service</a>
+        <button class="hamburger" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#categories">Categories</a>
+    <a href="#vendors">Vendors</a>
+    <a href="#submit">List Your Business</a>
+    <a href="#sponsorship">Sponsorship</a>
+    <a href="#submit" class="btn btn-primary btn-sm" style="margin-top:6px;width:fit-content">+ List Your Service</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="fade-up">
+        <div class="hero-eyebrow">Sienna Malayali Community</div>
+        <h1>Trusted <em>Community</em><br/>Vendors</h1>
+        <p class="hero-desc">
+          Connecting you with reliable service providers hand-picked and
+          recommended by your neighbors. Quality, trust, and community — all in one place.
+        </p>
+        <div class="hero-btns">
+          <a href="#vendors" class="btn btn-primary btn-lg">🔍 Find a Vendor</a>
+          <a href="#submit"  class="btn btn-outline btn-lg">➕ List Your Service</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <div class="ta ta1">AK</div>
+            <div class="ta ta2">SR</div>
+            <div class="ta ta3">PM</div>
+            <div class="ta ta4">JT</div>
+          </div>
+          <div class="trust-text">
+            <strong>Community Verified</strong>
+            <span>Recommended by residents like you</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual fade-up-2" aria-hidden="true">
+        <div class="hero-cards">
+          <div class="hc">
+            <div class="hc-icon s">🔧</div>
+            <h4>Raj Plumbing</h4>
+            <p>Licensed &amp; insured</p>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="hc accent">
+            <div class="hc-icon w">⚡</div>
+            <h4>SparkRight</h4>
+            <p>24/7 emergency</p>
+            <div class="stars">★★★★★</div>
+          </div>
+          <div class="hc">
+            <div class="hc-icon g">🏠</div>
+            <h4>Green Home Realty</h4>
+            <p>Local area experts</p>
+            <div class="stars">★★★★☆</div>
+          </div>
+          <div class="hc">
+            <div class="hc-icon o">🌬️</div>
+            <h4>CoolAir HVAC</h4>
+            <p>Fast installations</p>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="hero-float">
+          <div class="live-dot"></div>
+          All vendors community-approved
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-tag">Browse by Category</div>
+    <h2 class="section-title">What are you looking for?</h2>
+    <div class="divider"></div>
+
+    <div class="search-row">
+      <div class="search-wrap">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search vendors by name or service…" autocomplete="off" aria-label="Search vendors"/>
+      </div>
+      <select class="filter-select" id="sortSelect" aria-label="Sort vendors">
+        <option value="">Sort: Default</option>
+        <option value="az">Name A–Z</option>
+        <option value="featured">Featured First</option>
+      </select>
+    </div>
+
+    <div class="cat-grid" id="catGrid" role="group" aria-label="Filter by category">
+      <button class="cat-btn active" data-cat="all">
+        <div class="cat-ico">🏘️</div><span class="cat-lbl">All</span>
+      </button>
+      <button class="cat-btn" data-cat="plumbing">
+        <div class="cat-ico">🔧</div><span class="cat-lbl">Plumbing</span>
+      </button>
+      <button class="cat-btn" data-cat="electrical">
+        <div class="cat-ico">⚡</div><span class="cat-lbl">Electrical</span>
+      </button>
+      <button class="cat-btn" data-cat="hvac">
+        <div class="cat-ico">🌬️</div><span class="cat-lbl">HVAC</span>
+      </button>
+      <button class="cat-btn" data-cat="insurance">
+        <div class="cat-ico">🛡️</div><span class="cat-lbl">Insurance</span>
+      </button>
+      <button class="cat-btn" data-cat="realestate">
+        <div class="cat-ico">🏠</div><span class="cat-lbl">Real Estate</span>
+      </button>
+      <button class="cat-btn" data-cat="homeimprovement">
+        <div class="cat-ico">🪚</div><span class="cat-lbl">Home Improv.</span>
+      </button>
+      <button class="cat-btn" data-cat="cleaning">
+        <div class="cat-ico">🧹</div><span class="cat-lbl">Cleaning</span>
+      </button>
+      <button class="cat-btn" data-cat="it">
+        <div class="cat-ico">💻</div><span class="cat-lbl">IT Services</span>
+      </button>
+      <button class="cat-btn" data-cat="other">
+        <div class="cat-ico">✨</div><span class="cat-lbl">Other</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED BANNER -->
+<section class="featured-section" id="featured">
+  <div class="container">
+    <div class="featured-banner">
+      <div class="fb-content">
+        <div class="fb-tag">⭐ Sponsored Highlight</div>
+        <h2 class="fb-title">Want Premium Visibility<br/>in Our Community?</h2>
+        <p class="fb-desc">
+          Sponsored vendors appear first in every search, get a highlighted card,
+          and earn the trust of hundreds of local families every month.
+        </p>
+        <div class="fb-actions">
+          <a href="#sponsorship" class="btn btn-gold">Learn About Sponsorship</a>
+          <a href="#submit" class="btn btn-outline" style="color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.25)">Submit Your Business</a>
+        </div>
+      </div>
+      <div class="fb-visual" aria-hidden="true">
+        <div class="fb-stack">
+          <div class="fb-mini">
+            <div class="fb-mini-logo" style="background:var(--gold-bg)">🔧</div>
+            <div>
+              <div class="fb-mini-name">Raj Plumbing Co.</div>
+              <div class="fb-mini-cat">Plumbing</div>
+            </div>
+            <div class="fb-mini-badge">Sponsored</div>
+          </div>
+          <div class="fb-mini">
+            <div class="fb-mini-logo" style="background:var(--green-bg)">⚡</div>
+            <div>
+              <div class="fb-mini-name">SparkRight Electric</div>
+              <div class="fb-mini-cat">Electrical</div>
+            </div>
+            <div class="fb-mini-badge">Sponsored</div>
+          </div>
+          <div class="fb-mini">
+            <div class="fb-mini-logo" style="background:#fef5f1">🏠</div>
+            <div>
+              <div class="fb-mini-name">Green Home Realty</div>
+              <div class="fb-mini-cat">Real Estate</div>
+            </div>
+            <div class="fb-mini-badge">Sponsored</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VENDOR LISTING -->
+<section class="vendors-section" id="vendors">
+  <div class="container">
+    <div class="vendors-header">
+      <div>
+        <div class="section-tag">Service Providers</div>
+        <h2 class="section-title">Community Vendors</h2>
+      </div>
+      <span id="vendorCount" style="font-size:.88rem;color:var(--soft);font-weight:500" aria-live="polite"></span>
+    </div>
+    <div class="vendor-grid" id="vendorGrid" aria-label="Vendor listings"></div>
+  </div>
+</section>
+
+<!-- SUBMIT / GOOGLE FORM -->
+<section class="submit-section" id="submit">
+  <div class="container">
+    <div class="submit-grid">
+
+      <!-- Left info panel -->
+      <div class="submit-info">
+        <div class="section-tag">Join the Directory</div>
+        <h2 class="section-title">List Your Business</h2>
+        <div class="divider"></div>
+        <p class="section-sub">
+          Get discovered by hundreds of community members actively looking for
+          trusted local services. All submissions are reviewed before publishing.
+        </p>
+        <div class="submit-steps">
+          <div class="submit-step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Fill Out the Form</h4>
+              <p>Business name, category, contact info, and a short description.</p>
+            </div>
+          </div>
+          <div class="submit-step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Admin Review</h4>
+              <p>Our team reviews your submission within 2–3 business days.</p>
+            </div>
+          </div>
+          <div class="submit-step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Go Live</h4>
+              <p>Once approved, your business is added to the community directory.</p>
+            </div>
+          </div>
+          <div class="submit-step">
+            <div class="step-num">4</div>
+            <div class="step-text">
+              <h4>Optional: Get Sponsored</h4>
+              <p>Tick the sponsorship box to enquire about featured placement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="submit-note">
+          <strong>📋 How it works:</strong> Your response is saved directly to a Google Sheet. The admin reviews it and manually adds approved vendors to this page. Free to list — no hidden fees.
+        </div>
+      </div>
+
+      <!-- Right: Google Form embed -->
+      <div class="gform-wrap">
+        <div class="gform-header">
+          <h3>Vendor Submission Form</h3>
+          <p>Powered by Google Forms — responses go straight to our admin sheet.</p>
+        </div>
+
+        <!-- Uncomment this iframe and paste your Google Form embed URL -->
+        <!--
+        <iframe
+          class="gform-embed"
+          src="https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/viewform?embedded=true"
+          title="Vendor Submission Form"
+          loading="lazy">
+          Loading form…
+        </iframe>
+        -->
+
+        <div class="gform-placeholder">
+          <div class="gfp-icon">📋</div>
+          <h3>Google Form Goes Here</h3>
+          <p>
+            Create your Google Form, copy its <strong>embed URL</strong>, then
+            replace <code>YOUR_FORM_ID_HERE</code> in the
+            <code>&lt;iframe&gt;</code> above and delete this placeholder.
+          </p>
+          <a href="https://forms.google.com" target="_blank" rel="noopener" class="btn btn-primary">
+            Create Your Google Form →
+          </a>
+        </div>
+
+        <div class="gform-tips">
+          <div class="gtip"><strong>📝 Free to submit</strong><span>No fees to be listed</span></div>
+          <div class="gtip"><strong>✅ Reviewed first</strong><span>Admin approves all entries</span></div>
+          <div class="gtip"><strong>📊 Auto-saved</strong><span>Responses go to Google Sheets</span></div>
+          <div class="gtip"><strong>⭐ Upgrade anytime</strong><span>Ask about sponsored spots</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORSHIP -->
+<section class="sponsor-section section" id="sponsorship">
+  <div class="container">
+    <div class="text-center">
+      <div class="section-tag">Grow Your Business</div>
+      <h2 class="section-title">Why Sponsor with Us?</h2>
+      <div class="divider"></div>
+      <p class="section-sub">
+        Reach hundreds of active community members who trust our recommendations
+        and are ready to hire local services.
+      </p>
+    </div>
+    <div class="sponsor-grid">
+      <div class="sponsor-card">
+        <div class="sc-icon sc1">🎯</div>
+        <h3>Featured Placement</h3>
+        <p>Your business appears at the top of the directory with a gold-highlighted card — the first thing every visitor sees.</p>
+      </div>
+      <div class="sponsor-card">
+        <div class="sc-icon sc2">🤝</div>
+        <h3>Community Trust</h3>
+        <p>A Sponsored badge built on real community credibility, not cold advertising. Residents already trust this platform.</p>
+      </div>
+      <div class="sponsor-card">
+        <div class="sc-icon sc3">📈</div>
+        <h3>More Enquiries</h3>
+        <p>Sponsored vendors consistently receive more WhatsApp and email contacts from qualified, hyper-local leads.</p>
+      </div>
+    </div>
+    <div class="sponsor-cta">
+      <h3>Ready to Grow with the Community?</h3>
+      <p>
+        Sponsorship spots are kept limited to maintain quality and exclusivity.
+        Reach out to discuss rates and availability.
+      </p>
+      <div class="sponsor-cta-btns">
+        <a href="https://wa.me/1XXXXXXXXXX?text=Hi%2C+I%27m+interested+in+sponsoring+my+business+on+Sienna+Malayali+Vendors"
+           target="_blank" rel="noopener" class="btn btn-green btn-lg">
+          💬 WhatsApp Us
+        </a>
+        <a href="mailto:admin@siennamalayali.com?subject=Vendor%20Sponsorship%20Enquiry"
+           class="btn btn-primary btn-lg">
+          ✉️ Email for Rates
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BACKEND ARCHITECTURE -->
+<section class="backend-section">
+  <div class="container">
+    <div class="backend-inner">
+      <div>
+        <div class="section-tag">How It Works</div>
+        <h2 class="section-title">Backend Architecture</h2>
+        <div class="divider"></div>
+        <p class="section-sub">
+          A simple, free, zero-maintenance stack — perfect for a community site
+          with no developer overhead.
+        </p>
+        <ul class="check-list">
+          <li>Google Forms → free, no-code submissions</li>
+          <li>Google Sheets → auto-saves every response</li>
+          <li>Admin reviews &amp; manually publishes vendors</li>
+          <li>WhatsApp &amp; email as primary contact channels</li>
+          <li>Upgrade path: Airtable or Supabase when needed</li>
+        </ul>
+      </div>
+      <div>
+        <div class="bf-step">
+          <div class="bf-num">1</div>
+          <div class="bf-text">
+            <h4>Vendor fills Google Form</h4>
+            <p>Business details, category, contact info, sponsorship interest</p>
+            <span class="bf-tag">Google Forms (free)</span>
+          </div>
+        </div>
+        <div class="bf-step">
+          <div class="bf-num">2</div>
+          <div class="bf-text">
+            <h4>Response saved to Google Sheets</h4>
+            <p>Automatic — admin gets an email notification on each submission</p>
+            <span class="bf-tag">Google Sheets (auto-linked)</span>
+          </div>
+        </div>
+        <div class="bf-step">
+          <div class="bf-num">3</div>
+          <div class="bf-text">
+            <h4>Admin reviews &amp; approves</h4>
+            <p>Review the sheet, verify the vendor, mark as Approved / Sponsored</p>
+            <span class="bf-tag">Manual review (simple)</span>
+          </div>
+        </div>
+        <div class="bf-step">
+          <div class="bf-num">4</div>
+          <div class="bf-text">
+            <h4>Admin adds vendor to this page</h4>
+            <p>Copy approved details into the <code style="color:var(--terra-light)">vendors</code> array in the JS section of this file and re-upload</p>
+            <span class="bf-tag">Edit HTML → re-upload</span>
+          </div>
+        </div>
+        <div class="bf-step">
+          <div class="bf-num">5</div>
+          <div class="bf-text">
+            <h4>Future upgrade</h4>
+            <p>Connect Airtable + a free API to auto-publish without touching code</p>
+            <span class="bf-tag">Optional — when you scale</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="nav-logo">
+        <div class="logo-mark">S</div>
+        <span class="logo-text" style="color:#fff">Sienna <span>Malayali</span></span>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="https://www.siennamalayali.com">Home</a>
+        <a href="#vendors">Vendors</a>
+        <a href="#submit">List Your Business</a>
+        <a href="#sponsorship">Sponsorship</a>
+        <a href="mailto:admin@siennamalayali.com">Contact</a>
+      </nav>
+    </div>
+    <p class="footer-copy">
+      © 2025 Sienna Malayali Community &nbsp;·&nbsp; Trusted Vendors Directory &nbsp;·&nbsp;
+      <a href="https://www.siennamalayali.com" style="color:var(--terra-light)">siennamalayali.com</a>
+    </p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float"
+   href="https://wa.me/1XXXXXXXXXX?text=Hi%2C+I+found+you+on+the+Sienna+Malayali+Vendor+Directory"
+   target="_blank" rel="noopener"
+   aria-label="Chat on WhatsApp">
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- JAVASCRIPT -->
+<script>
+const vendors = [
+  {
+    id:1, name:"Raj Plumbing Co.",
+    category:"plumbing", categoryLabel:"Plumbing",
+    desc:"Licensed and insured plumber with 15+ years serving the Sienna community. Specialises in emergency repairs, re-piping, and water heater installation.",
+    phone:"+1 (832) 555-0191", email:"raj@rajplumbing.com", whatsapp:"18325550191",
+    location:"Sienna, Missouri City TX",
+    rating:5, quote:"Fixed our burst pipe within the hour — absolute lifesaver! – Priya M.",
+    logo:"🔧", logoColor:"#c2714f", featured:true, recommended:true
+  },
+  {
+    id:2, name:"SparkRight Electric",
+    category:"electrical", categoryLabel:"Electrical",
+    desc:"Full-service residential electrician. Panel upgrades, EV charger installation, and whole-home rewiring. Same-day emergency service available.",
+    phone:"+1 (281) 555-0374", email:"info@sparkrightelectric.com", whatsapp:"12815550374",
+    location:"Sienna & Sugar Land TX",
+    rating:5, quote:"Super professional, very fairly priced. Highly recommend! – Anil K.",
+    logo:"⚡", logoColor:"#3d7a52", featured:true, recommended:true
+  },
+  {
+    id:3, name:"CoolAir HVAC Services",
+    category:"hvac", categoryLabel:"HVAC",
+    desc:"Heating, ventilation, and AC specialists. Annual tune-ups, new installations, and 24-hour emergency repairs for all major brands.",
+    phone:"+1 (713) 555-0258", email:"service@coolair.com", whatsapp:"17135550258",
+    location:"Missouri City TX",
+    rating:4, quote:"Got our AC replaced in one day — super efficient! – Sunita R.",
+    logo:"🌬️", logoColor:"#4a52c8", featured:false, recommended:true
+  },
+  {
+    id:4, name:"Sharma Insurance Agency",
+    category:"insurance", categoryLabel:"Insurance",
+    desc:"Independent insurance broker for home, auto, life, and business policies. Multiple carriers compared to secure the best rate for you.",
+    phone:"+1 (832) 555-0482", email:"deepa@sharmainsurance.com", whatsapp:"18325550482",
+    location:"Sienna, TX",
+    rating:5, quote:"Saved us $900/year on home insurance. Thank you, Deepa! – Thomas J.",
+    logo:"🛡️", logoColor:"#d4952a", featured:false, recommended:true
+  },
+  {
+    id:5, name:"Green Home Realty",
+    category:"realestate", categoryLabel:"Real Estate",
+    desc:"Your trusted real estate partner in Fort Bend County. Buyer and seller representation, investment properties, and new construction guidance.",
+    phone:"+1 (281) 555-0617", email:"hello@greenhomerealty.com", whatsapp:"12815550617",
+    location:"Fort Bend County TX",
+    rating:5, quote:"Helped us buy and sell in the same month. Incredible! – Meena & Ravi",
+    logo:"🏠", logoColor:"#3d7a52", featured:false, recommended:true
+  },
+  {
+    id:6, name:"BrightClean Services",
+    category:"cleaning", categoryLabel:"Cleaning",
+    desc:"Residential deep cleaning, move-in/move-out cleans, and recurring housekeeping. Fully bonded, insured, and eco-friendly products only.",
+    phone:"+1 (832) 555-0733", email:"book@brightclean.com", whatsapp:"18325550733",
+    location:"Sienna & Pearland TX",
+    rating:4, quote:"My house has never been this clean. Worth every penny! – Nadia P.",
+    logo:"🧹", logoColor:"#c2714f", featured:false, recommended:true
+  },
+  {
+    id:7, name:"TechFirst IT Solutions",
+    category:"it", categoryLabel:"IT Services",
+    desc:"Home network setup, computer repair, smart home installation, and small business IT support. Remote and on-site service available.",
+    phone:"+1 (713) 555-0849", email:"help@techfirst.com", whatsapp:"17135550849",
+    location:"Greater Houston TX",
+    rating:4, quote:"Fixed my WiFi issues in 30 minutes. Fast and knowledgeable. – Carlos M.",
+    logo:"💻", logoColor:"#4a52c8", featured:false, recommended:true
+  },
+  {
+    id:8, name:"ProBuild Renovations",
+    category:"homeimprovement", categoryLabel:"Home Improvement",
+    desc:"General contractor for kitchen remodels, bathroom upgrades, flooring, painting, and custom carpentry. Licensed, bonded & community trusted.",
+    phone:"+1 (281) 555-0960", email:"quote@probuildreno.com", whatsapp:"12815550960",
+    location:"Sienna, TX",
+    rating:5, quote:"Our kitchen remodel came out absolutely stunning. 10/10! – Lakshmi V.",
+    logo:"🪚", logoColor:"#9e5138", featured:false, recommended:true
+  }
+];
+
+/* -- RENDER VENDORS -- */
+function stars(n){return'★'.repeat(n)+'☆'.repeat(5-n)}
+
+function renderVendors(list){
+  const grid=document.getElementById('vendorGrid');
+  const count=document.getElementById('vendorCount');
+  count.textContent=`Showing ${list.length} vendor${list.length!==1?'s':''}`;
+  if(!list.length){
+    grid.innerHTML=`<div class="no-results"><span>🔍</span>No vendors match your search.<br/>Try a different category or keyword.</div>`;
+    return;
+  }
+  const sorted=[...list].sort((a,b)=>(b.featured?1:0)-(a.featured?1:0));
+  grid.innerHTML=sorted.map(v=>`
+    <article class="vendor-card" data-cat="${v.category}" data-featured="${v.featured}">
+      <div class="vc-header">
+        <div class="vc-logo" style="background:${v.logoColor}" aria-hidden="true">${v.logo}</div>
+        <div class="vc-badges">
+          ${v.featured?'<span class="badge badge-spon">⭐ Sponsored</span>':''}
+          ${v.recommended?'<span class="badge badge-rec">✓ Recommended</span>':''}
+        </div>
+      </div>
+      <div class="vc-body">
+        <div class="vc-name">${v.name}</div>
+        <div class="vc-cat">${v.categoryLabel}</div>
+        <p class="vc-desc">${v.desc}</p>
+        <div class="vc-rating">
+          <span class="stars" aria-label="${v.rating} out of 5 stars">${stars(v.rating)}</span>
+          <span>${v.rating}.0 / 5</span>
+        </div>
+        <blockquote class="vc-quote">${v.quote}</blockquote>
+        ${v.location?`<div class="vc-location">📍 ${v.location}</div>`:''}
+      </div>
+      <div class="vc-footer">
+        <a class="vc-contact" href="tel:${v.phone.replace(/\\D/g,'')}">📞 ${v.phone}</a>
+        <a class="vc-contact" href="mailto:${v.email}">✉️ Email</a>
+        <a class="vc-contact vc-wa"
+           href="https://wa.me/${v.whatsapp}?text=Hi%2C+I+found+you+on+Sienna+Malayali+Vendors"
+           target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+    </article>
+  `).join('');
+}
+
+/* -- FILTER & SEARCH -- */
+let activeCategory='all';
+
+function applyFilters(){
+  const q=document.getElementById('searchInput').value.trim().toLowerCase();
+  const sort=document.getElementById('sortSelect').value;
+  let list=vendors.filter(v=>{
+    const catOk=activeCategory==='all'||v.category===activeCategory;
+    const qOk=!q||
+      v.name.toLowerCase().includes(q)||
+      v.desc.toLowerCase().includes(q)||
+      v.categoryLabel.toLowerCase().includes(q)||
+      (v.location&&v.location.toLowerCase().includes(q));
+    return catOk&&qOk;
+  });
+  if(sort==='az') list.sort((a,b)=>a.name.localeCompare(b.name));
+  else if(sort==='featured') list.sort((a,b)=>(b.featured?1:0)-(a.featured?1:0));
+  renderVendors(list);
+}
+
+/* -- CATEGORY BUTTONS -- */
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCategory=btn.dataset.cat;
+    applyFilters();
+    document.getElementById('vendors').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
+
+document.getElementById('searchInput').addEventListener('input',applyFilters);
+document.getElementById('sortSelect').addEventListener('change',applyFilters);
+
+/* -- MOBILE MENU -- */
+const menuBtn=document.getElementById('menuBtn');
+const mobileMenu=document.getElementById('mobileMenu');
+menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+
+/* -- INIT -- */
+renderVendors(vendors);
+</script>
+
+</body>
+</html>
